@@ -16,6 +16,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
+// Components
+import MenuBar from '../../components/MenuBar/menuBar';
+
 // Icons
 import HomeRounded from '@material-ui/icons/HomeRounded';
 import PetsRounded from '@material-ui/icons/PetsRounded';
@@ -81,7 +84,7 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <p> Insertar componente de usuario</p>
+          <MenuBar />
         </Toolbar>
       </AppBar>
       <Drawer
