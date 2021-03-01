@@ -18,6 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 // Components
 import MenuBar from '../../components/MenuBar/menuBar';
+import Ficha from '../../components/Ficha/Ficha';
 
 // Icons
 import HomeRounded from '@material-ui/icons/HomeRounded';
@@ -121,7 +122,6 @@ function App() {
       <main className={classes.container}>
 
         <div className={classes.body}>
-
 
           <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
