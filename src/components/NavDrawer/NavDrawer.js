@@ -26,18 +26,10 @@ function NavDrawer(props) {
         setState(false);
     };
 
-    function handleChange(event, newValue) {
-        props.history.push(newValue);
-        console.log('se cambio');
-        console.log(event.value);
-        console.log(event.newValue);
+    function handleClick({currentTarget}, newValue) {
+        props.history.push(currentTarget.dataset.value);
     }
-    function handleClick(event, newValue) {
-        console.log('se clcikea');
-        console.log(event);
-        console.log(event.value);
-        console.log(event.newValue);
-    }
+
 
     return (
         <Drawer
@@ -62,31 +54,31 @@ function NavDrawer(props) {
 
             <Divider />
 
-            <List value={props.location.pathname} onChange={handleChange} onClick={handleClick}>
+            <List value={props.location.pathname} >
 
-                <ListItem button key={"Home"} value="/" onClick={handleClick}>
-                    <ListItemIcon value="/"> <HomeRounded value="/" /> </ListItemIcon>
-                    <ListItemText primary="Home" value="/" />
+                <ListItem button key={"Home"} data-value="/" onClick={handleClick}>
+                    <ListItemIcon value="/"> <HomeRounded /> </ListItemIcon>
+                    <ListItemText primary="Home" />
                 </ListItem>
 
-                <ListItem button key={"Pet"} >
+                <ListItem button key={"Pet"} data-value="/Pet" onClick={handleClick}>
                     <ListItemIcon> <PetsRounded /> </ListItemIcon>
-                    <ListItemText primary="Pet" value="/Pet" />
+                    <ListItemText primary="Pet" />
                 </ListItem>
 
-                <ListItem button key={"Progress"} >
+                <ListItem button key={"Progress"} data-value="/Progress" onClick={handleClick}>
                     <ListItemIcon> <TimelineRounded /> </ListItemIcon>
-                    <ListItemText primary="Progress" value="/Progress" />
-                </ListItem>
-                
-                <ListItem button key={"Skills"} >
-                    <ListItemIcon> <ComputerRounded /> </ListItemIcon>
-                    <ListItemText primary="Skills" value="/Skills" />
+                    <ListItemText primary="Progress" />
                 </ListItem>
 
-                <ListItem button key={"Test"} >
+                <ListItem button key={"Skills"} data-value="/Skills" onClick={handleClick}>
+                    <ListItemIcon> <ComputerRounded /> </ListItemIcon>
+                    <ListItemText primary="Skills" />
+                </ListItem>
+
+                <ListItem button key={"Test"} data-value="/Test" onClick={handleClick}>
                     <ListItemIcon> <SchoolRounded /> </ListItemIcon>
-                    <ListItemText primary="Test" value="/Test" />
+                    <ListItemText primary="Test" />
                 </ListItem>
 
             </List>
