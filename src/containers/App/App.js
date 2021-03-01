@@ -12,6 +12,9 @@ import NavBar from '../../components/NavBar/NavBar';
 import NavDrawer from '../../components/NavDrawer/NavDrawer';
 import Home from '../Home/Home';
 import Pet from '../Pet/Pet';
+import Progress from '../Progress/Progress';
+import Skills from '../Skills/Skills';
+import Test from '../Test/Test';
 
 function App() {
   const classes = useStyles();
@@ -30,7 +33,10 @@ function App() {
           <div className={classes.body}>
 
             <Route path="/" exact component={Home} />
-            <Route path="/pet" component={Pet} />
+            <Route path="/Pet" component={Pet} />
+            <Route path="/Progress" component={Progress} />
+            <Route path="/Skills" component={Skills} />
+            <Route path="/Test" component={Test} />
 
           </div>
         </main>

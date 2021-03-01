@@ -4,6 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Drawer, List, Divider } from '@material-ui/core';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
+import { withRouter } from 'react-router-dom';
 
 //Context
 import { MenuContext } from '../../containers/App/Provider';
@@ -25,22 +26,17 @@ function NavDrawer(props) {
         setState(false);
     };
 
-    const setIcons = (index) => {
-        switch (index) {
-            case 0:
-                return (<HomeRounded />);
-            case 1:
-                return (<PetsRounded />);
-            case 2:
-                return (<TimelineRounded />);
-            case 3:
-                return (<ComputerRounded />);
-            case 4:
-                return (<SchoolRounded />);
-
-            default:
-                break;
-        }
+    function handleChange(event, newValue) {
+        props.history.push(newValue);
+        console.log('se cambio');
+        console.log(event.value);
+        console.log(event.newValue);
+    }
+    function handleClick(event, newValue) {
+        console.log('se clcikea');
+        console.log(event);
+        console.log(event.value);
+        console.log(event.newValue);
     }
 
     return (
@@ -63,11 +59,36 @@ function NavDrawer(props) {
                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                 </IconButton>
             </div>
+
             <Divider />
-            <List>
-                {['Inicio', 'Mi mascota', 'Progreso', 'Habilidades', 'Ponte a prueba'].map((text, index) => (
-                    <ListItem button key={text}> <ListItemIcon>{setIcons(index)}</ListItemIcon> <ListItemText primary={text} /> </ListItem>
-                ))}
+
+            <List value={props.location.pathname} onChange={handleChange} onClick={handleClick}>
+
+                <ListItem button key={"Home"} value="/" onClick={handleClick}>
+                    <ListItemIcon value="/"> <HomeRounded value="/" /> </ListItemIcon>
+                    <ListItemText primary="Home" value="/" />
+                </ListItem>
+
+                <ListItem button key={"Pet"} >
+                    <ListItemIcon> <PetsRounded /> </ListItemIcon>
+                    <ListItemText primary="Pet" value="/Pet" />
+                </ListItem>
+
+                <ListItem button key={"Progress"} >
+                    <ListItemIcon> <TimelineRounded /> </ListItemIcon>
+                    <ListItemText primary="Progress" value="/Progress" />
+                </ListItem>
+                
+                <ListItem button key={"Skills"} >
+                    <ListItemIcon> <ComputerRounded /> </ListItemIcon>
+                    <ListItemText primary="Skills" value="/Skills" />
+                </ListItem>
+
+                <ListItem button key={"Test"} >
+                    <ListItemIcon> <SchoolRounded /> </ListItemIcon>
+                    <ListItemText primary="Test" value="/Test" />
+                </ListItem>
+
             </List>
             <Divider />
 
@@ -108,4 +129,4 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default NavDrawer;
+export default withRouter(NavDrawer);
