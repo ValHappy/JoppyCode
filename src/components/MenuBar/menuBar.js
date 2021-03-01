@@ -30,11 +30,11 @@ function MenuBar() {
     };
 
     return (
-        <div className={classes.container}>
+        <div className={classes.profile}>
             <div>
                 <FormGroup>
                     <FormControlLabel
-                    className={classes.switch}
+                        className={classes.switch}
                         control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
                         label={auth ? 'Logout' : 'Login'}
                     />
@@ -42,7 +42,7 @@ function MenuBar() {
             </div>
 
             {auth && (
-                <div>
+                <div className={classes.container}>
                     <IconButton
                         aria-label="account of current user"
                         aria-controls="menu-appbar"
@@ -69,33 +69,40 @@ function MenuBar() {
                         open={open}
                         onClose={handleClose}
                     >
+                        <MenuItem onClick={handleClose}>Username</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
                         <MenuItem onClick={handleClose}>Logout</MenuItem>
                     </Menu>
-
                 </div>
             )}
         </div>
     );
 }
 
-
 const useStyles = makeStyles((theme) => ({
-    container: {
+    profile: {
         width: '100%',
         display: 'flex',
         justifyContent: 'flex-end',
+    },
+    container: {
+        width: '5%',
+        margin: '0',
+        padding: '0,5em',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     menuButton: {
         marginRight: theme.spacing(3),
     },
     menu: {
         marginTop: '3em',
+        marginLeft: '-1em',
     },
     switch: {
         color: colors.black,
     }
-
 }));
 
 export default MenuBar;
