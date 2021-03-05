@@ -1,12 +1,12 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 function Home() {
     const classes = useStyles();
 
     return (
         <div className={classes.home}>
-        <h1>ESTO ES MI HOMEEEEEEEEEEEEEE</h1>
+            <h1>ESTO ES MI HOMEEEEEEEEEEEEEE</h1>
         </div>
     );
 }

@@ -23,7 +23,6 @@ function App() {
     <Router>
       <div className={classes.app}>
         <CssBaseline />
-
         <Provider>
           <NavBar />
           <NavDrawer />
@@ -31,13 +30,11 @@ function App() {
 
         <main className={classes.container}>
           <div className={classes.body}>
-
             <Route path="/" exact component={Home} />
             <Route path="/Pet" component={Pet} />
             <Route path="/Progress" component={Progress} />
             <Route path="/Skills" component={Skills} />
             <Route path="/Test" component={Test} />
-
           </div>
         </main>
 
@@ -48,9 +45,11 @@ function App() {
 
 const useStyles = makeStyles((theme) => ({
   app: {
-    display: 'flex',
     width: '100%',
     height: '100%',
+    margin: 0,
+    padding: 0,
+    display: 'flex',
   },
   container: {
     flexGrow: 1,

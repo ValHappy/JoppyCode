@@ -1,33 +1,20 @@
 import React from 'react';
 import { Card, CardContent, makeStyles } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
 import colors from '../../config/colors';
+import Btn from '../General/Btn';
 
-//Variables
-const FichaWidth = 300;
-const FichaHeight = 400;
-
-function Ficha() {
+function Ficha({ icon, skill, desc }) {
     const classes = useStyles();
 
     return (
         <Card className={classes.container}>
             <CardContent className={classes.content}>
-
                 <div className={classes.icon}>
-                    <p>icon</p>
+                    {icon}
                 </div>
-
-                <h1 className={classes.title}>Titulo</h1>
-                <p className={classes.desc}>Emmm</p>
-
-                <Button
-                className={classes.btn}
-                variant="contained"
-                disableElevation>
-                    Action button
-                </Button>
-
+                <h1 className={classes.title}>{skill}</h1>
+                <p className={classes.desc}>{desc}</p>
+                <Btn text={"Ir ahora"} />
             </CardContent>
         </Card>
     );
@@ -35,8 +22,10 @@ function Ficha() {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        width: FichaWidth,
-        height: FichaHeight,
+        width: '30%',
+        height: '95%',
+        margin: '1.5em',
+        padding: '0.5em',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -60,18 +49,13 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         margin: '0',
-        padding: '1em',
+        padding: '0.5em',
     },
     desc: {
         margin: '0',
-        padding: '0,5em'
-    },
-    btn: {
-        margin: '1em',
         padding: '0,5em',
-        borderRadius: '2em',
-        background: colors.pink,
-    }
+        textAlign: 'center',
+    },
 }));
 
 export default Ficha;
