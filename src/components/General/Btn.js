@@ -4,10 +4,10 @@ import Button from '@material-ui/core/Button';
 import colors from '../../config/colors';
 
 //variables
-const btnWidth = 250;
+const btnWidth = '85%';
 const btnHeigth = 45;
 
-function Btn({onClick,text, color}) {
+function Btn({onClick,text}) {
     const classes = useStyle();
 
     return (

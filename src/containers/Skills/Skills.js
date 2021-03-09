@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Ficha from '../../components/Ficha/Ficha';
-import { ComputerRounded } from '@material-ui/icons';
+import { AccountTreeRounded, AssignmentTurnedInRounded, BugReportRounded, ExtensionRounded } from '@material-ui/icons';
 import colors from '../../config/colors';
 
 function Skills() {
@@ -9,27 +9,43 @@ function Skills() {
 
     return (
         <div className={classes.skills}>
-            <h1>HABILIDADES</h1>
+            <h1>HABILIDADES FUNDAMENTALES</h1>
             <div className={classes.container}>
                 <Ficha
-                    icon={<ComputerRounded className={classes.icon} />}
+                    icon={
+                        <AccountTreeRounded
+                            className={classes.icon}
+                            fontSize="large"
+                        />}
                     skill={"Descomposición"}
-                    desc={"Lorem ipsum dolor sit amet consectetur adipiscing elit nam litora, pharetra etiam iaculis in duis netus rutrum nibh, nascetur"}
+                    desc={"¡Vamos a descomponer!"}
                 />
                 <Ficha
-                    icon={<ComputerRounded className={classes.icon} />}
+                    icon={
+                        <ExtensionRounded
+                            className={classes.icon}
+                            fontSize="large"
+                        />}
                     skill={"Abstracción"}
-                    desc={"Lorem ipsum dolor sit amet consectetur adipiscing elit nam litora, pharetra etiam iaculis in duis netus rutrum nibh, nascetur"}
+                    desc={"¡Vamos a razonar!"}
                 />
                 <Ficha
-                    icon={<ComputerRounded className={classes.icon} />}
+                    icon={
+                        <AssignmentTurnedInRounded
+                            className={classes.icon}
+                            fontSize="large"
+                        />}
                     skill={"Generalización"}
-                    desc={"Lorem ipsum dolor sit amet consectetur adipiscing elit nam litora, pharetra etiam iaculis in duis netus rutrum nibh, nascetur"}
+                    desc={"¡Diseñemos algoritmos!"}
                 />
                 <Ficha
-                    icon={<ComputerRounded className={classes.icon} />}
+                    icon={
+                        <BugReportRounded
+                            className={classes.icon}
+                            fontSize="large"
+                        />}
                     skill={"Depuración"}
-                    desc={"Lorem ipsum dolor sit amet consectetur adipiscing elit nam litora, pharetra etiam iaculis in duis netus rutrum nibh, nascetur"}
+                    desc={"¡Vamos a evaluar!"}
                 />
             </div>
         </div>
@@ -48,8 +64,9 @@ const useStyles = makeStyles(theme => ({
     container: {
         width: '100%',
         height: '100%',
+        marginTop: '3%',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
     },
     icon: {

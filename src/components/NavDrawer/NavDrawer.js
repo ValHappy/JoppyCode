@@ -26,7 +26,7 @@ function NavDrawer(props) {
         setState(false);
     };
 
-    function handleClick({currentTarget}, newValue) {
+    function handleClick({ currentTarget }, newValue) {
         props.history.push(currentTarget.dataset.value);
     }
 
@@ -58,27 +58,27 @@ function NavDrawer(props) {
 
                 <ListItem button key={"Home"} data-value="/" onClick={handleClick}>
                     <ListItemIcon value="/"> <HomeRounded /> </ListItemIcon>
-                    <ListItemText primary="Home" />
+                    <ListItemText primary="Inicio" />
                 </ListItem>
 
                 <ListItem button key={"Pet"} data-value="/Pet" onClick={handleClick}>
                     <ListItemIcon> <PetsRounded /> </ListItemIcon>
-                    <ListItemText primary="Pet" />
+                    <ListItemText primary="Mi mascota" />
                 </ListItem>
 
                 <ListItem button key={"Progress"} data-value="/Progress" onClick={handleClick}>
                     <ListItemIcon> <TimelineRounded /> </ListItemIcon>
-                    <ListItemText primary="Progress" />
+                    <ListItemText primary="Progreso" />
                 </ListItem>
 
                 <ListItem button key={"Skills"} data-value="/Skills" onClick={handleClick}>
                     <ListItemIcon> <ComputerRounded /> </ListItemIcon>
-                    <ListItemText primary="Skills" />
+                    <ListItemText primary="Habilidades" />
                 </ListItem>
 
                 <ListItem button key={"Test"} data-value="/Test" onClick={handleClick}>
                     <ListItemIcon> <SchoolRounded /> </ListItemIcon>
-                    <ListItemText primary="Test" />
+                    <ListItemText primary="Ponte a prueba" />
                 </ListItem>
 
             </List>
