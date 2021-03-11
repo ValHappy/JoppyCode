@@ -19,6 +19,7 @@ function Skills() {
                         />}
                     skill={"Descomposición"}
                     desc={"¡Vamos a descomponer!"}
+                    col={colors.pink}
                 />
                 <Ficha
                     icon={
@@ -28,6 +29,7 @@ function Skills() {
                         />}
                     skill={"Abstracción"}
                     desc={"¡Vamos a razonar!"}
+                    col={colors.blue}
                 />
                 <Ficha
                     icon={
@@ -37,6 +39,7 @@ function Skills() {
                         />}
                     skill={"Generalización"}
                     desc={"¡Diseñemos algoritmos!"}
+                    col={colors.acua}
                 />
                 <Ficha
                     icon={
@@ -46,6 +49,7 @@ function Skills() {
                         />}
                     skill={"Depuración"}
                     desc={"¡Vamos a evaluar!"}
+                    col={colors.violet}
                 />
             </div>
         </div>

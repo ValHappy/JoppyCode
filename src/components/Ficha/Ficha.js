@@ -1,20 +1,18 @@
 import React from 'react';
 import { Card, CardContent, makeStyles } from '@material-ui/core';
-import colors from '../../config/colors';
 import Btn from '../General/Btn';
 
-function Ficha({ icon, skill, desc }) {
+function Ficha({ icon, skill, desc, col }) {
     const classes = useStyles();
-
     return (
         <Card className={classes.container}>
             <CardContent className={classes.content}>
-                <div className={classes.icon}>
+                <div className={classes.icon} style={{background: col}}>
                     {icon}
                 </div>
                 <h1 className={classes.title}>{skill}</h1>
                 <p className={classes.desc}>{desc}</p>
-                <Btn text={"Ir ahora"} />
+                <Btn text={"Ir ahora"} col={col}/>
             </CardContent>
         </Card>
     );
@@ -43,7 +41,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        background: colors.pink,
+        //background: colors.pink,
         borderRadius: '1em',
     },
     title: {

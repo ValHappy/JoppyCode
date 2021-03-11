@@ -7,11 +7,11 @@ import colors from '../../config/colors';
 const btnWidth = '85%';
 const btnHeigth = 45;
 
-function Btn({onClick,text}) {
+function Btn({onClick,text, col = colors.pink}) {
     const classes = useStyle();
 
     return (
-        <Button onClick={onClick} className={classes.btn} variant="outlined"> {text} </Button>
+        <Button onClick={onClick} className={classes.btn} variant="outlined" style={{background: col}}> {text} </Button>
     );
 }
 
@@ -21,14 +21,13 @@ const useStyle = makeStyles((theme) => ({
         padding: '0.5em',
         width: btnWidth,
         height: btnHeigth,
-        background: colors.pink,
         borderRadius: '5em',
         color: colors.white,
         
         '&:hover': {
             backgroundColor: colors.white,
             borderColor: colors.pink,
-            color: colors.pink,
+            opacity: 0.7,
             boxShadow: 'none',
         },
     }
