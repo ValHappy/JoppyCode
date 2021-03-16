@@ -6,7 +6,7 @@ function ProgressSkill({ title }) {
     const classes = useStyle();
 
     return (
-        <Card className={classes.container}>
+        <Card className={classes.container + " " + "animate__animated animate__zoomIn"}>
             <CardContent className={classes.content}>
                 <h1 className={classes.title}>{title}</h1>
                 <div className={classes.info}>
@@ -39,7 +39,7 @@ const useStyle = makeStyles((theme) => ({
     title: {
         margin: '0',
         color: colors.white,
-        fontSize: "1.3vw"
+        fontSize: '1.3vw',
     },
     info: {
         width: 100,

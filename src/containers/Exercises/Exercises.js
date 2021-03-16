@@ -2,22 +2,21 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import FichaExercise from '../../components/Ficha/FichaExercise';
-import img1 from '../../assets/img/robot.png';
 import Step from '../../components/General/Step';
+import img1 from '../../assets/img/robot.png';
 
 function Exercises() {
     const classes = useStyles();
 
     return (
         <div className={classes.exercises}>
-            <h1 className={classes.title}>EJERCICIOS DE DESCOMPOSICIÓN</h1>
+            <h1 className={classes.title + " " + "animate__animated animate__slideInDown"}>EJERCICIOS DE DESCOMPOSICIÓN</h1>
 
             <div className={classes.container}>
                 <Step />
             </div>
 
             <div className={classes.container}>
-
                 <FichaExercise
                     col={colors.pink}
                     img={img1}
@@ -58,7 +57,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
     },
     title: {
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
     },
     container: {
         width: '100%',

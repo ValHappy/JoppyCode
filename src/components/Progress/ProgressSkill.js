@@ -6,7 +6,7 @@ function ProgressSkill({ icon, score, skill }) {
     const classes = useStyle();
 
     return (
-        <Card className={classes.container}>
+        <Card className={classes.container + " " + "animate__animated animate__zoomIn"}>
             <CardContent className={classes.content}>
                 <div className={classes.icon}>
                     {icon}
@@ -54,11 +54,11 @@ const useStyle = makeStyles((theme) => ({
     score: {
         margin: '0',
         color: colors.black,
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
     },
     skillName: {
         margin: '0',
-        fontSize: "1vw",
+        fontSize: '1vw',
     },
 }));
 

@@ -11,7 +11,7 @@ function Progress() {
 
     return (
         <div className={classes.progress}>
-            <h1 className={classes.title}>PROGRESO</h1>
+            <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>PROGRESO</h1>
             <div className={classes.container}>
                 <ProgressSkill
                     icon={<ExtensionRounded className={classes.icon}
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
     },
     title: {
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
     },
     container: {
         width: '100%',

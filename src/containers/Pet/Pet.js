@@ -6,13 +6,15 @@ function Pet() {
 
     return (
         <div className={classes.pet}>
-        <h1>ESTO ES MI MASCOTA</h1>
+        <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>ESTO ES MI MASCOTAA</h1>
         </div>
     );
 }
 
 const useStyles = makeStyles(theme => ({
-
+    title: {
+        fontSize: '1.3vw',
+    },
 }));
 
 export default Pet;

@@ -9,7 +9,7 @@ function Skills() {
 
     return (
         <div className={classes.skills}>
-            <h1 className={classes.title}>HABILIDADES FUNDAMENTALES</h1>
+            <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>HABILIDADES FUNDAMENTALES</h1>
             <div className={classes.container}>
                 <Ficha
                     icon={
@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
     },
     title: {
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
     },
     container: {
         width: '100%',

@@ -6,13 +6,15 @@ function Test() {
 
     return (
         <div className={classes.test}>
-        <h1>ESTO ES MI PONTE A PRUEBA</h1>
+         <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>ESTO ES MI PONTE A PRUEBAA</h1>
         </div>
     );
 }
 
 const useStyles = makeStyles(theme => ({
-
+    title: {
+        fontSize: '1.3vw',
+    },
 }));
 
 export default Test;

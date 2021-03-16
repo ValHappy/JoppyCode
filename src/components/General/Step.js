@@ -35,10 +35,9 @@ const useColorlibStepIconStyles = makeStyles({
     root: {
         width: "100%",
         height: "90%",
-        padding: '0.7em',
         backgroundColor: '#ccc',
         color: colors.white,
-        borderRadius: 4,
+        borderRadius: "50%",
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -78,7 +77,7 @@ export default function CustomizedSteppers() {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root + " " + "animate__animated animate__slideInDown"}>
             <Button
                 disabled={activeStep === 0}
                 color="secondary"
@@ -88,10 +87,10 @@ export default function CustomizedSteppers() {
             </Button>
 
             <div className={classes.stepper}>
-                <Stepper alternativeLabel activeStep={activeStep} connector="none">
+                <Stepper alternativeLabel activeStep={activeStep} connector="none" style={{padding: 0, margin: 0}}>
                     {steps.map((label) => (
                         <Step key={label}>
-                            <StepLabel StepIconComponent={ColorlibStepIcon} style={{ fontSize: '0.7vw' }}> {label} </StepLabel>
+                            <StepLabel StepIconComponent={ColorlibStepIcon} style={{ fontSize: '0.1vw',}}> {label} </StepLabel>
                         </Step>
                     ))}
                 </Stepper>
@@ -110,7 +109,9 @@ export default function CustomizedSteppers() {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
+        width: '80%',
+        margin: 0,
+        padding: 0,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

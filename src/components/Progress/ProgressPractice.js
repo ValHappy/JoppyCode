@@ -6,7 +6,7 @@ function ProgressPractice({ title }) {
     const classes = useStyle();
 
     return (
-        <Card className={classes.practice}>
+        <Card className={classes.practice + " " + "animate__animated animate__zoomIn"}>
             <CardContent className={classes.container}>
                 <h1 className={classes.title}>{title}</h1>
                 <div className={classes.content}>
@@ -37,12 +37,12 @@ const useStyle = makeStyles((theme) => ({
     },
     title: {
         margin: '0',
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
         color: colors.black,
     },
-    dubtitle: {
+    subtitle: {
         margin: '0',
-        fontSize: "1vw",
+        fontSize: '1vw',
     },
     content: {
         width: '100%',

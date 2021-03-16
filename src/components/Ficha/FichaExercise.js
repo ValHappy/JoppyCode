@@ -1,12 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
+import { withRouter } from 'react-router-dom';
 
-function FichaExercise({ titleExercise, col, img }) {
+function FichaExercise({ titleExercise, col, img, location, history }) {
     const classes = useStyles();
+
+    function handleClick() {
+        history.push("/");
+    }
+
     return (
-        <div className={classes.container} style={{ background: col }}>
-            <div className={classes.content}>
+        <div className={classes.container + " " + "animate__animated animate__zoomIn"} style={{ background: col }} data-value={location.pathname}>
+            <div className={classes.content} onClick={handleClick}>
                 <img className={classes.img} src={img} alt="imagen del ejercicio" />
                 <h1 className={classes.title}>{titleExercise}</h1>
             </div>
@@ -23,7 +29,6 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 4,
-
     },
     content: {
         width: '100%',
@@ -32,6 +37,10 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+
+        '&:hover': {
+            cursor: 'pointer',
+        },
     },
     img: {
         width: '9em',
@@ -41,9 +50,9 @@ const useStyles = makeStyles(theme => ({
         margin: '0',
         marginTop: '1em',
         padding: '0.5em',
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
         color: colors.black,
     },
 }));
 
-export default FichaExercise;
+export default withRouter(FichaExercise);

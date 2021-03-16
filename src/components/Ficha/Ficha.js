@@ -6,12 +6,12 @@ import { withRouter } from 'react-router-dom';
 function Ficha({ icon, skill, desc, col, location, history }) {
     const classes = useStyles();
 
-    function handleClick(event, newValue) {
+    function handleClick() {
         history.push("/exercises");
     }
 
     return (
-        <Card className={classes.container}>
+        <Card className={classes.container + " " + "animate__animated animate__zoomIn"} >
             <CardContent className={classes.content} data-value={location.pathname}>
                 <div className={classes.icon} style={{ background: col }}>
                     {icon}
@@ -54,14 +54,14 @@ const useStyles = makeStyles(theme => ({
         margin: '0',
         marginTop: '1em',
         padding: '0.5em',
-        fontSize: "1.3vw",
+        fontSize: '1.3vw',
     },
     desc: {
         margin: '0',
         marginBottom: '2em',
         padding: '0,5em',
         textAlign: 'center',
-        fontSize: "1vw",
+        fontSize: '1vw',
     },
 }));
 
