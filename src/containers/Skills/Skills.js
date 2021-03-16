@@ -9,7 +9,7 @@ function Skills() {
 
     return (
         <div className={classes.skills}>
-            <h1>HABILIDADES FUNDAMENTALES</h1>
+            <h1 className={classes.title}>HABILIDADES FUNDAMENTALES</h1>
             <div className={classes.container}>
                 <Ficha
                     icon={
@@ -64,6 +64,9 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    title: {
+        fontSize: "1.3vw",
     },
     container: {
         width: '100%',

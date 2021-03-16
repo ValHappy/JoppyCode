@@ -11,10 +11,10 @@ function ProgressPractice({ title }) {
                 <h1 className={classes.title}>{title}</h1>
                 <div className={classes.content}>
                     <div className={classes.daily}>
-                        <h2 className={classes.title}>Insertar gráfica de practica diaria</h2>
+                        <h2 className={classes.subtitle}>Insertar gráfica de practica diaria</h2>
                     </div>
                     <div className={classes.monthly}>
-                        <h2 className={classes.title}>Insertar gráfica de practica mensual</h2>
+                        <h2 className={classes.subtitle}>Insertar gráfica de practica mensual</h2>
                     </div>
                 </div>
             </CardContent>
@@ -37,7 +37,12 @@ const useStyle = makeStyles((theme) => ({
     },
     title: {
         margin: '0',
+        fontSize: "1.3vw",
         color: colors.black,
+    },
+    dubtitle: {
+        margin: '0',
+        fontSize: "1vw",
     },
     content: {
         width: '100%',

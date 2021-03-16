@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         display: 'flex',
         justifyContent: 'flex-end',
+        fontSize: "0.7vw",
     },
     container: {
         width: '5%',

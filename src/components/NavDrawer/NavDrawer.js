@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Drawer, List, Divider } from '@material-ui/core';
-import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemIcon } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import { withRouter } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ import { MenuContext } from '../../containers/App/Provider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { HomeRounded, PetsRounded, TimelineRounded, ComputerRounded, SchoolRounded } from '@material-ui/icons';
+import colors from '../../config/colors';
 
 // Variables
 const drawerWidth = 240;
@@ -56,29 +57,29 @@ function NavDrawer(props) {
 
             <List value={props.location.pathname} >
 
-                <ListItem button key={"Home"} data-value="/" onClick={handleClick}>
-                    <ListItemIcon value="/"> <HomeRounded /> </ListItemIcon>
-                    <ListItemText primary="Inicio" />
+                <ListItem className={classes.item} button key={"Home"} data-value="/" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon}> <HomeRounded /> </ListItemIcon>
+                    <label > Inicio</label>
                 </ListItem>
 
-                <ListItem button key={"Pet"} data-value="/Pet" onClick={handleClick}>
-                    <ListItemIcon> <PetsRounded /> </ListItemIcon>
-                    <ListItemText primary="Mi mascota" />
+                <ListItem className={classes.item} button key={"Pet"} data-value="/Pet" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon}> <PetsRounded /> </ListItemIcon>
+                    <label > Mi mascota</label>
                 </ListItem>
 
-                <ListItem button key={"Progress"} data-value="/Progress" onClick={handleClick}>
-                    <ListItemIcon> <TimelineRounded /> </ListItemIcon>
-                    <ListItemText primary="Progreso" />
+                <ListItem className={classes.item} button key={"Progress"} data-value="/Progress" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon}> <TimelineRounded /> </ListItemIcon>
+                    <label > Progreso</label>
                 </ListItem>
 
-                <ListItem button key={"Skills"} data-value="/Skills" onClick={handleClick}>
-                    <ListItemIcon> <ComputerRounded /> </ListItemIcon>
-                    <ListItemText primary="Habilidades" />
+                <ListItem className={classes.item} button key={"Skills"} data-value="/Skills" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon}> <ComputerRounded /> </ListItemIcon>
+                    <label > Habilidades</label>
                 </ListItem>
 
-                <ListItem button key={"Test"} data-value="/Test" onClick={handleClick}>
-                    <ListItemIcon> <SchoolRounded /> </ListItemIcon>
-                    <ListItemText primary="Ponte a prueba" />
+                <ListItem className={classes.item} button key={"Test"} data-value="/Test" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon}> <SchoolRounded /> </ListItemIcon>
+                    <label > Ponte a prueba</label>
                 </ListItem>
 
             </List>
@@ -93,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
         width: drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
+
     },
     drawerOpen: {
         width: drawerWidth,
@@ -119,6 +121,17 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(0, 1),
         ...theme.mixins.toolbar,
     },
+    item: {
+        '&:hover': {
+            color: colors.pink,
+        },
+    },
+    icon: {
+        '&:hover': {
+            color: colors.pink,
+        },
+    },
+    
 }));
 
 export default withRouter(NavDrawer);

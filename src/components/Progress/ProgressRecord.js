@@ -9,7 +9,6 @@ function ProgressSkill({ title }) {
         <Card className={classes.container}>
             <CardContent className={classes.content}>
                 <h1 className={classes.title}>{title}</h1>
-
                 <div className={classes.info}>
                 </div>
 
@@ -40,6 +39,7 @@ const useStyle = makeStyles((theme) => ({
     title: {
         margin: '0',
         color: colors.white,
+        fontSize: "1.3vw"
     },
     info: {
         width: 100,

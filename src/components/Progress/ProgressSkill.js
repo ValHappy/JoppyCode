@@ -54,9 +54,11 @@ const useStyle = makeStyles((theme) => ({
     score: {
         margin: '0',
         color: colors.black,
+        fontSize: "1.3vw",
     },
     skillName: {
         margin: '0',
+        fontSize: "1vw",
     },
 }));
 

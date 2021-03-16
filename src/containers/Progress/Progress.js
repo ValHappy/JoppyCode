@@ -11,7 +11,7 @@ function Progress() {
 
     return (
         <div className={classes.progress}>
-            <h1>PROGRESO</h1>
+            <h1 className={classes.title}>PROGRESO</h1>
             <div className={classes.container}>
                 <ProgressSkill
                     icon={<ExtensionRounded className={classes.icon}
@@ -40,7 +40,7 @@ function Progress() {
             </div>
             <div className={classes.container}>
                 <ProgressPractice title={"Frecuencia diaria"} />
-                <ProgressRecord title={"Lorem Ipsum Dolor"}/>
+                <ProgressRecord title={"Lorem Ipsum Dolor"} />
             </div>
         </div>
     );
@@ -54,6 +54,9 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    title: {
+        fontSize: "1.3vw",
     },
     container: {
         width: '100%',

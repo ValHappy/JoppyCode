@@ -49,6 +49,7 @@ const useStyle = makeStyles(() => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        fontSize: '0.55vw',
     },
     container: {
         width: '100%',

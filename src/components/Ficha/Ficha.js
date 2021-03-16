@@ -1,18 +1,24 @@
 import React from 'react';
 import { Card, CardContent, makeStyles } from '@material-ui/core';
 import Btn from '../General/Btn';
+import { withRouter } from 'react-router-dom';
 
-function Ficha({ icon, skill, desc, col }) {
+function Ficha({ icon, skill, desc, col, location, history }) {
     const classes = useStyles();
+
+    function handleClick(event, newValue) {
+        history.push("/exercises");
+    }
+
     return (
         <Card className={classes.container}>
-            <CardContent className={classes.content}>
-                <div className={classes.icon} style={{background: col}}>
+            <CardContent className={classes.content} data-value={location.pathname}>
+                <div className={classes.icon} style={{ background: col }}>
                     {icon}
                 </div>
                 <h1 className={classes.title}>{skill}</h1>
                 <p className={classes.desc}>{desc}</p>
-                <Btn text={"Ir ahora"} col={col}/>
+                <Btn text={"Ir ahora"} col={col} onClick={handleClick}/>
             </CardContent>
         </Card>
     );
@@ -48,13 +54,15 @@ const useStyles = makeStyles(theme => ({
         margin: '0',
         marginTop: '1em',
         padding: '0.5em',
+        fontSize: "1.3vw",
     },
     desc: {
         margin: '0',
         marginBottom: '2em',
         padding: '0,5em',
         textAlign: 'center',
+        fontSize: "1vw",
     },
 }));
 
-export default Ficha;
+export default withRouter(Ficha);
