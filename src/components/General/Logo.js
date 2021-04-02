@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import logo from "../../assets/img/JoppyCode.svg"
-
-//variables
-const logoWidth = 250;
+import logo from "../../assets/logo/JoppyCode.svg";
 
 function Logo() {
     const classes = useStyle();
@@ -15,9 +12,9 @@ function Logo() {
 
 const useStyle = makeStyles((theme) => ({
     logo: {
-        width: logoWidth,
-        margin: '1em',
-        padding: '2em',
+        margin: 0,
+        padding: '0.5em',
+        width: '50%',
     },
 }));
 

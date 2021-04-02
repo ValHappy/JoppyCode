@@ -7,7 +7,7 @@ function FichaExercise({ titleExercise, col, img, location, history }) {
     const classes = useStyles();
 
     function handleClick() {
-        history.push("/");
+        history.push("/exercise");
     }
 
     return (

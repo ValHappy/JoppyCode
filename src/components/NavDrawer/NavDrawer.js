@@ -14,6 +14,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { HomeRounded, PetsRounded, TimelineRounded, ComputerRounded, SchoolRounded } from '@material-ui/icons';
 import colors from '../../config/colors';
+import Logo from '../General/Logo';
 
 // Variables
 const drawerWidth = 240;
@@ -47,10 +48,15 @@ function NavDrawer(props) {
             }}
         >
             <div className={classes.toolbar}>
-                <IconButton
-                    onClick={handleDrawerClose}>
-                    {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                </IconButton>
+                <div className={classes.logo}>
+                    <Logo />
+                </div>
+                <div className={classes.iconContent}>
+                    <IconButton
+                        onClick={handleDrawerClose}>
+                        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                    </IconButton>
+                </div>
             </div>
 
             <Divider />
@@ -131,7 +137,18 @@ const useStyles = makeStyles((theme) => ({
             color: colors.pink,
         },
     },
-    
+    logo: {
+        width: '100%',
+        heigth: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    iconContent: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 }));
 
 export default withRouter(NavDrawer);

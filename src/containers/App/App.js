@@ -16,6 +16,7 @@ import Skills from '../Skills/Skills';
 import Test from '../Test/Test';
 import Footer from '../../components/General/Footer';
 import Exercises from '../Exercises/Exercises';
+import Exercise from '../Exercise/Exercise';
 
 function App() {
   const classes = useStyles();
@@ -36,6 +37,7 @@ function App() {
             <Route path="/Progress" component={Progress} />
             <Route path="/Skills" component={Skills} />
             <Route path="/exercises" component={Exercises} />
+            <Route path="/exercise" component={Exercise} />
             <Route path="/Test" component={Test} />
           </div>
           <div className={classes.footer}>
