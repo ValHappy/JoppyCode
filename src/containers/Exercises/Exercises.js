@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import FichaExercise from '../../components/Ficha/FichaExercise';
 import Step from '../../components/General/Step';
-import img1 from '../../assets/img/robot.png';
+import img1 from './../../assets/img/robot.png';
 
 function Exercises() {
     const classes = useStyles();

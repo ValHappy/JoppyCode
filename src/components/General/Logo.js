@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import logo from "../../assets/logo/JoppyCode.svg";
+import logo from "./../../assets/logo/JoppyCode.svg";
 
 function Logo() {
     const classes = useStyle();
