@@ -102,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '-1em',
     },
     switch: {
+        paddingTop : "1em",
         color: colors.black,
     }
 }));

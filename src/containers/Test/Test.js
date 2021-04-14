@@ -6,7 +6,7 @@ function Test() {
 
     return (
         <div className={classes.test}>
-         <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>ESTO ES MI PONTE A PRUEBAA</h1>
+         <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>PONTE A PRUEBA</h1>
         </div>
     );
 }

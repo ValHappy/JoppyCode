@@ -14,7 +14,7 @@ function ProgressPractice({ title }) {
                         <h2 className={classes.subtitle}>Insertar gráfica de practica diaria</h2>
                     </div>
                     <div className={classes.monthly}>
-                        <h2 className={classes.subtitle}>Insertar gráfica de practica mensual</h2>
+                        <h2 className={classes.subtitle}>Insertar gráfica de <br/>practica mensual</h2>
                     </div>
                 </div>
             </CardContent>

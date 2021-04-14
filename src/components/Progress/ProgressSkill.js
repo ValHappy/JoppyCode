@@ -58,7 +58,7 @@ const useStyle = makeStyles((theme) => ({
     },
     skillName: {
         margin: '0',
-        fontSize: '1vw',
+        fontSize: '0.9vw',
     },
 }));
 

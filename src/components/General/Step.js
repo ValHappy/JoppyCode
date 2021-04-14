@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { ChevronLeftRounded, ChevronRightRounded, MoodBadRounded, SentimentSatisfiedAltRounded, SentimentVeryDissatisfiedRounded, SentimentVerySatisfiedRounded } from '@material-ui/icons';
 import { Step, StepLabel, Stepper } from '@material-ui/core';
 import colors from '../../config/colors';
+import { MenuContext } from '../../containers/App/Provider';
 
 function ColorlibStepIcon(props) {
     const classes = useColorlibStepIconStyles();
@@ -60,20 +61,30 @@ ColorlibStepIcon.propTypes = {
 };
 
 function getSteps() {
-    return ['Principiante', 'Básico', 'Intermedio', 'Avanzado'];
+    return ['Principiante', 'Basico', 'Intermedio', 'Avanzado'];
 }
 
-export default function CustomizedSteppers() {
+export default React.memo(function CustomizedSteppers() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const steps = getSteps();
+    const [, , , , dificultad, setDificultad] = useContext(MenuContext);
+
+    useEffect(() => {
+        setDificultad(steps[activeStep].toLowerCase());
+        return () => {
+            
+        }
+    }, [])
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setDificultad(steps[activeStep+1].toLowerCase());
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        setDificultad(steps[activeStep-1].toLowerCase());
     };
 
     return (
@@ -105,7 +116,7 @@ export default function CustomizedSteppers() {
             </Button>
         </div>
     );
-}
+});
 
 const useStyles = makeStyles((theme) => ({
     root: {

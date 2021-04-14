@@ -6,7 +6,7 @@ function Pet() {
 
     return (
         <div className={classes.pet}>
-        <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>ESTO ES MI MASCOTAA</h1>
+        <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>MASCOTA</h1>
         </div>
     );
 }

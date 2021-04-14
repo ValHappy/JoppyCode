@@ -28,8 +28,6 @@ function App() {
         <Provider>
           <NavBar />
           <NavDrawer />
-        </Provider>
-
         <main className={classes.container}>
           <div className={classes.content}>
             <Route path="/" exact component={Home} />
@@ -40,10 +38,12 @@ function App() {
             <Route path="/exercise" component={Exercise} />
             <Route path="/Test" component={Test} />
           </div>
+    
           <div className={classes.footer}>
             <Footer />
           </div>
         </main>
+        </Provider>
       </div>
     </Router>
   );

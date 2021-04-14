@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import Btn from '../../components/General/Btn';
 import Instructions from '../../components/General/Instructions';
+import Nonogram from '../../components/Nonogram/Nonogram';
+import Match3 from '../../components/Match3/Match3';
+import { MenuContext } from '../../containers/App/Provider';
 
 function Exercise() {
     const classes = useStyle();
+    const [, , habilidad, , dificultad] = useContext(MenuContext);
 
     const [open, setOpen] = useState(false);
 
@@ -18,6 +22,18 @@ function Exercise() {
         setOpen(false);
     };
 
+    const selectGame = () => {
+        switch (habilidad.value) {
+            case "abstraccion":
+            return <Match3 difficult={dificultad} />;
+                break;
+
+            case "depuracion":
+            return <Nonogram difficult={dificultad} />;
+                break;
+        }
+    }
+
     return (
         <div className={classes.container}>
             <div className={classes.content}>
@@ -27,8 +43,8 @@ function Exercise() {
                 <Btn text="Instrucciones" onClick={handleClickOpen} />
                 <Instructions open={open} handleClose={handleClose} />
             </div>
-            <div className={classes.exercise} >
-            <p className={classes.text}>Instertar ejercicio aquí</p>
+            <div className={classes.exercise} id="exercise">
+                {selectGame()}
             </div>
 
         </div>
@@ -68,7 +84,6 @@ const useStyle = makeStyles(() => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        background: colors.lila,
     }
 }));
 

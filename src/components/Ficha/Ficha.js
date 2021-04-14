@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Card, CardContent, makeStyles } from '@material-ui/core';
 import Btn from '../General/Btn';
 import { withRouter } from 'react-router-dom';
+import { MenuContext } from '../../containers/App/Provider';
 
-function Ficha({ icon, skill, desc, col, location, history }) {
+function Ficha({ icon, skill, value, desc, col, location, history }) {
     const classes = useStyles();
+    const [, , habilidad, setHabilidad] = useContext(MenuContext);
 
     function handleClick() {
-        history.push("/exercises");
+        setHabilidad({name:skill.toUpperCase(),value:value});
+        history.push("/exercises?id="+value);
     }
 
     return (

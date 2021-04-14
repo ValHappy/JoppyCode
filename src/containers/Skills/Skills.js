@@ -6,7 +6,6 @@ import colors from '../../config/colors';
 
 function Skills() {
     const classes = useStyles();
-
     return (
         <div className={classes.skills}>
             <h1 className={classes.title  + " " + "animate__animated animate__slideInDown"}>HABILIDADES FUNDAMENTALES</h1>
@@ -18,6 +17,7 @@ function Skills() {
                             fontSize="large"
                         />}
                     skill={"Descomposición"}
+                    value={"descomposicion"}
                     desc={"¡Vamos a descomponer!"}
                     col={colors.pink}
                 />
@@ -28,6 +28,7 @@ function Skills() {
                             fontSize="large"
                         />}
                     skill={"Abstracción"}
+                    value={"abstraccion"}
                     desc={"¡Vamos a razonar!"}
                     col={colors.blue}
                 />
@@ -38,6 +39,7 @@ function Skills() {
                             fontSize="large"
                         />}
                     skill={"Generalización"}
+                    value={"generalizacion"}
                     desc={"¡Diseñemos algoritmos!"}
                     col={colors.acua}
                 />
@@ -48,6 +50,7 @@ function Skills() {
                             fontSize="large"
                         />}
                     skill={"Depuración"}
+                    value={"depuracion"}
                     desc={"¡Vamos a evaluar!"}
                     col={colors.violet}
                 />

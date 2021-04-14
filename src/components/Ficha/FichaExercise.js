@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import { withRouter } from 'react-router-dom';
+import { MenuContext } from '../../containers/App/Provider';
 
-function FichaExercise({ titleExercise, col, img, location, history }) {
+function FichaExercise({ titleExercise,value, col, img, location, history }) {
     const classes = useStyles();
+    const [, , habilidad, setHabilidad, dificultad, setDificultad] = useContext(MenuContext);
 
     function handleClick() {
-        history.push("/exercise");
+        history.push("/exercise?id="+habilidad.value+ "?id="+value+"?diffcult="+dificultad);
     }
 
     return (
