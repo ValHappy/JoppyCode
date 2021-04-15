@@ -6,14 +6,14 @@ import { MenuContext } from '../../containers/App/Provider';
 
 function FichaExercise({ titleExercise,value, col, img, location, history }) {
     const classes = useStyles();
-    const [, , habilidad, setHabilidad, dificultad, setDificultad] = useContext(MenuContext);
+    const [, , habilidad, , dificultad, ] = useContext(MenuContext);
 
     function handleClick() {
         history.push("/exercise?id="+habilidad.value+ "?id="+value+"?diffcult="+dificultad);
     }
 
     return (
-        <div className={classes.container + " " + "animate__animated animate__zoomIn"} style={{ background: col }} data-value={location.pathname}>
+        <div className={classes.container +" animate__animated animate__zoomIn"} style={{ background: col }} data-value={location.pathname}>
             <div className={classes.content} onClick={handleClick}>
                 <img className={classes.img} src={img} alt="imagen del ejercicio" />
                 <h1 className={classes.title}>{titleExercise}</h1>
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     img: {
-        width: '9em',
+        marginRight: '7%',
         height: '10em',
     },
     title: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '1em',
         padding: '0.5em',
         fontSize: '1.3vw',
-        color: colors.black,
+        color: colors.white,
     },
 }));
 

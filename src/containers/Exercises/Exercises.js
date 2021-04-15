@@ -3,16 +3,16 @@ import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import FichaExercise from '../../components/Ficha/FichaExercise';
 import Step from '../../components/General/Step';
-import img1 from './../../assets/img/robot.png';
+import img1 from './../../assets/img/Joppy.png';
 import { MenuContext } from '../../containers/App/Provider';
 
 function Exercises() {
     const classes = useStyles();
-    const [openMenu, setState, habilidad, setHabilidad] = useContext(MenuContext);
+    const [, , habilidad] = useContext(MenuContext);
 
     return (
         <div className={classes.exercises}>
-            <h1 className={classes.title + " " + "animate__animated animate__slideInDown"}>EJERCICIOS DE {habilidad.name}</h1>
+            <h1 className={classes.title + " animate__animated animate__slideInDown"}>EJERCICIOS DE {habilidad.name}</h1>
 
             <div className={classes.container}>
                 <Step />

@@ -6,7 +6,7 @@ import { MenuContext } from '../../containers/App/Provider';
 
 function Ficha({ icon, skill, value, desc, col, location, history }) {
     const classes = useStyles();
-    const [, , habilidad, setHabilidad] = useContext(MenuContext);
+    const [, , , setHabilidad] = useContext(MenuContext);
 
     function handleClick() {
         setHabilidad({name:skill.toUpperCase(),value:value});
@@ -14,7 +14,7 @@ function Ficha({ icon, skill, value, desc, col, location, history }) {
     }
 
     return (
-        <Card className={classes.container + " " + "animate__animated animate__zoomIn"} >
+        <Card className={classes.container + " animate__animated animate__zoomIn"} >
             <CardContent className={classes.content} data-value={location.pathname}>
                 <div className={classes.icon} style={{ background: col }}>
                     {icon}

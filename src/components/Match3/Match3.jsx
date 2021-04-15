@@ -42,7 +42,7 @@ const Match3 = ({ difficult }) => {
 
         function findNextColoredTile(collection, index) {
             for (var i = index; i > -1; i--) {
-                if (collection[i].id != 0) {
+                if (collection[i].id !== 0) {
                     return collection[i];
                 }
             }
@@ -90,10 +90,10 @@ const Match3 = ({ difficult }) => {
             var multiplier = 0;
 
             for (var i = 0; i < tiles.tiles.length; i++) {
-                if (tiles.tiles[i].horizontalMatch() && tiles.tiles[i].id != 0) {
+                if (tiles.tiles[i].horizontalMatch() && tiles.tiles[i].id !== 0) {
                     matchingTiles[matchingTiles.length] = tiles.tiles[i].horizontalTiles();
                 }
-                if (tiles.tiles[i].verticalMatch() && tiles.tiles[i].id != 0) {
+                if (tiles.tiles[i].verticalMatch() && tiles.tiles[i].id !== 0) {
                     matchingTiles[matchingTiles.length] = tiles.tiles[i].verticalTiles();
                 }
             }
