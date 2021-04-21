@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
-import JoppyConejo from '../../assets/img/Joppy.png';
+import JoppyConejo from '../../assets/img/JoppyGafas.png';
 
 function Home() {
     const classes = useStyles();
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     Joppy: {
         margin: 0,
         padding: 0,
-        width: '70%',
+        width: '50%',
     }
 }));
 
