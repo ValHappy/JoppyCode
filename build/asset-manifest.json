@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.e0cce68a.chunk.js",
-    "main.js.map": "/static/js/main.e0cce68a.chunk.js.map",
+    "main.js": "/static/js/main.59f14b2f.chunk.js",
+    "main.js.map": "/static/js/main.59f14b2f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.da1778af.js",
     "runtime-main.js.map": "/static/js/runtime-main.da1778af.js.map",
-    "static/js/2.a36695c6.chunk.js": "/static/js/2.a36695c6.chunk.js",
-    "static/js/2.a36695c6.chunk.js.map": "/static/js/2.a36695c6.chunk.js.map",
+    "static/js/2.73b8c9f4.chunk.js": "/static/js/2.73b8c9f4.chunk.js",
+    "static/js/2.73b8c9f4.chunk.js.map": "/static/js/2.73b8c9f4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7d7be19334e3afbb9df15404e2c6b408.js": "/precache-manifest.7d7be19334e3afbb9df15404e2c6b408.js",
+    "precache-manifest.a16086e7fe98d5c555c66cf6beef8351.js": "/precache-manifest.a16086e7fe98d5c555c66cf6beef8351.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.a36695c6.chunk.js.LICENSE.txt": "/static/js/2.a36695c6.chunk.js.LICENSE.txt",
+    "static/js/2.73b8c9f4.chunk.js.LICENSE.txt": "/static/js/2.73b8c9f4.chunk.js.LICENSE.txt",
     "static/media/Joppy.png": "/static/media/Joppy.716387fc.png",
-    "static/media/JoppyCode.svg": "/static/media/JoppyCode.7839ce0c.svg",
+    "static/media/JoppyCode.svg": "/static/media/JoppyCode.8f9ad984.svg",
     "static/media/JoppyGafas.png": "/static/media/JoppyGafas.4553c0cc.png",
     "static/media/robot.png": "/static/media/robot.afd16a27.png"
   },
   "entrypoints": [
     "static/js/runtime-main.da1778af.js",
-    "static/js/2.a36695c6.chunk.js",
-    "static/js/main.e0cce68a.chunk.js"
+    "static/js/2.73b8c9f4.chunk.js",
+    "static/js/main.59f14b2f.chunk.js"
   ]
 }

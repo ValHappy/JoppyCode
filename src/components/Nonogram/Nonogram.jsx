@@ -320,4 +320,4 @@ const Nonogram = ({ difficult }) => {
     )
 }
 
-export default Nonogram;
+export default React.memo(Nonogram);

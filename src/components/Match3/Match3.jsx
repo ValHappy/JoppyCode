@@ -168,7 +168,7 @@ const Match3 = ({ difficult }) => {
                 let nColor = 0;
                 switch (difficult) {
                     case "principiante":
-                    nColor = 5;
+                        nColor = 5;
                         break;
                     case "basico":
                         nColor = 6;
@@ -463,6 +463,7 @@ const Match3 = ({ difficult }) => {
     var matchManager;
     var animation;
     var difN;
+    var cnv;
 
     const setup = (p5, canvasParentRef) => {
 
@@ -478,7 +479,8 @@ const Match3 = ({ difficult }) => {
 
         topScore = new scoreText(p5, 50, 60, 45, "Top Score: ")
         score = new scoreText(p5, 50, 100, 30, "Score: ");
-        p5.createCanvas(p5.windowWidth * 0.25, p5.windowWidth * 0.25).parent(canvasParentRef);
+        cnv = p5.createCanvas(p5.windowWidth * 0.25, p5.windowWidth * 0.25);
+        cnv.parent(canvasParentRef);
         colors = new Colors(p5);
         matchManager = new matchManager(p5);
         animation = new animationManager(p5);
@@ -497,21 +499,25 @@ const Match3 = ({ difficult }) => {
     }
 
     const mousePressed = (p5) => {
-        if (animation.isAnimating) {
-            return;
-        }
-        matchManager.onMouseDown(tiles.tiles.filter(function (x) { return x.isMouseOver(p5.mouseX, p5.mouseY, 0, 0); }));
+        cnv.mousePressed(event => {
+            if (animation.isAnimating) {
+                return;
+            }
+            matchManager.onMouseDown(tiles.tiles.filter(function (x) { return x.isMouseOver(p5.mouseX, p5.mouseY, 0, 0); }));
+        });
     }
 
     const mouseDragged = (p5) => {
-        if (animation.isAnimating) {
-            return;
-        }
-        matchManager.onMouseDragged(tiles.tiles.filter(function (x) { return x.isMouseOver(p5.mouseX, p5.mouseY, 0, 0); }));
+            if (animation.isAnimating) {
+                return;
+            }
+            matchManager.onMouseDragged(tiles.tiles.filter(function (x) { return x.isMouseOver(p5.mouseX, p5.mouseY, 0, 0); }));
     }
 
     const mouseReleased = (p5) => {
+        cnv.mouseReleased(event => {
         matchManager.onMouseUp();
+        });
     }
 
     /*
@@ -574,4 +580,4 @@ const Match3 = ({ difficult }) => {
     )
 }
 
-export default Match3;
+export default React.memo(Match3);

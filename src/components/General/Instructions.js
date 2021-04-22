@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import colors from '../../config/colors';
 import robo from './../../assets/img/robot.png';
 
-function Instructions({ handleClose, open, img }) {
+function Instructions({ handleClose, open, img, info }) {
 
     const classes = useStyle();
 
@@ -15,7 +15,7 @@ function Instructions({ handleClose, open, img }) {
 
             <DialogContent className={classes.container}>
                 <p className={classes.text}>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit lectus sapien, cubilia mattis bibendum suscipit euismod metus proin convallis phasellus nisi, class fermentum id magnis accumsan vitae netus ad. Hendrerit fusce vestibulum placerat per primis mattis hac nostra.
+                    {info.instru}
                 </p>
                 <img className={classes.img} src={robo} alt="Imagen explicativa del ejercicio" />
                 <p className={classes.text}>
@@ -28,7 +28,7 @@ function Instructions({ handleClose, open, img }) {
 
 const useStyle = makeStyles((theme) => ({
     title: {
-        marginTop: '2em',
+        marginTop: '1em',
         color: colors.pink,
         textAlign: 'center',
     },

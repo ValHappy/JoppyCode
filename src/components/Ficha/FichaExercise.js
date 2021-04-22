@@ -4,19 +4,20 @@ import colors from '../../config/colors';
 import { withRouter } from 'react-router-dom';
 import { MenuContext } from '../../containers/App/Provider';
 
-function FichaExercise({ titleExercise,value, col, img, location, history }) {
+function FichaExercise({ value, col, img, location, history, information }) {
     const classes = useStyles();
-    const [, , habilidad, , dificultad, ] = useContext(MenuContext);
+    const [, , habilidad, , dificultad, , , setInfoExcerse ] = useContext(MenuContext);
 
     function handleClick() {
         history.push("/exercise?id="+habilidad.value+ "?id="+value+"?diffcult="+dificultad);
+        setInfoExcerse(information);
     }
 
     return (
         <div className={classes.container +" animate__animated animate__zoomIn"} style={{ background: col }} data-value={location.pathname}>
             <div className={classes.content} onClick={handleClick}>
                 <img className={classes.img} src={img} alt="imagen del ejercicio" />
-                <h1 className={classes.title}>{titleExercise}</h1>
+                <h1 className={classes.title}>{information.title}</h1>
             </div>
         </div>
     );
@@ -52,7 +53,8 @@ const useStyles = makeStyles(theme => ({
         margin: '0',
         marginTop: '1em',
         padding: '0.5em',
-        fontSize: '1.3vw',
+        fontSize: '1.1vw',
+        textAlign: 'center',
         color: colors.white,
     },
 }));

@@ -1,17 +1,19 @@
-import React, { useState, useContext } from 'react';
+import React,{ useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core';
-import colors from '../../config/colors';
 import Btn from '../../components/General/Btn';
 import Instructions from '../../components/General/Instructions';
 import Nonogram from '../../components/Nonogram/Nonogram';
 import Match3 from '../../components/Match3/Match3';
-import { MenuContext } from '../../containers/App/Provider';
+import { MenuContext } from '../App/Provider';
+import {selectColor} from '../../helpers/getColor';
 
 function Exercise() {
     const classes = useStyle();
-    const [, , habilidad, , dificultad] = useContext(MenuContext);
+    const [, , habilidad, , dificultad,,infoExercise] = useContext(MenuContext);
 
     const [open, setOpen] = useState(false);
+
+    const col = selectColor(habilidad.value);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -37,11 +39,11 @@ function Exercise() {
     return (
         <div className={classes.container}>
             <div className={classes.content}>
-                <h1>Titulo</h1>
-                <h3>Subtitulo</h3>
-                <p className={classes.text}>Lorem ipsum dolor sit amet consectetur, adipiscing elit mi quisque laoreet felis, gravida duis nascetur sagittis. Molestie rutrum pulvinar vel nostra at aenean cursus, viverra blandit morbi nascetur tincidunt fermentum feugiat</p>
-                <Btn text="Instrucciones" onClick={handleClickOpen} />
-                <Instructions open={open} handleClose={handleClose} />
+                <h1>{infoExercise.title}</h1>
+                <h3>{infoExercise.subtitle}</h3>
+                <p className={classes.text}>{infoExercise.description}</p>
+                <Btn text="Instrucciones" onClick={handleClickOpen} col={col} />
+                <Instructions open={open} handleClose={handleClose} info={infoExercise} />
             </div>
             <div className={classes.exercise} id="exercise">
                 {selectGame()}

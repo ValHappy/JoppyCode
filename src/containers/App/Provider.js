@@ -4,8 +4,9 @@ export default ({ children }) =>{
     const [state,setState] = useState(false);
     const [habilidad,setHabilidad] = useState("");
     const [dificultad,setDificultad] = useState("");
+    const [infoExcerse,setInfoExcerse] = useState({});
     return (            
-            <MenuContext.Provider value={[state,setState,habilidad,setHabilidad, dificultad, setDificultad]}>
+            <MenuContext.Provider value={[state,setState,habilidad,setHabilidad, dificultad, setDificultad, infoExcerse, setInfoExcerse]}>
                 {children}
             </MenuContext.Provider>  
     );

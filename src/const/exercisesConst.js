@@ -1,4 +1,4 @@
-const descomp = [
+export const descomp = [
     {
         title: 'Geometry Draw',
         subtitle: '¡Cuidado con repetir!',
@@ -6,9 +6,9 @@ const descomp = [
         instru: 'Mueve el cursor para pasar por cada una de las figuras y pintarlas todas, pero CUIDADO, en cuanto pases con el cursor dos veces por una misma figura, el ejercicio se reicniciará. Piensa antes de dibujar cual sería el camino más adecuado',
         instruImg: '',
     }
-],
+];
 
-const abstra = [
+export const abstra = [
     {
         title: 'Joppy Color',
         subtitle: '¡Alcanza la maxíma puntuación!',
@@ -16,9 +16,9 @@ const abstra = [
         instru: 'Mueve las fichas de colores y en cuanto juntes 3 iguales, estas desaparecerán dándote puntos y moviendo las demás. Intenta conseguir la máxima puntuación posible (entre más fichas iguales juntes, mayor será tu puntuación)',
         instruImg: '',
     }
-],
+];
 
-const general = [
+export const general = [
     {
         title: '¿Dónde esta mi zanahoria?',
         subtitle: '¡Ayuda a Joppy a llegar a su zanahoria!',
@@ -26,9 +26,9 @@ const general = [
         instru: 'Los botones en la parte inferior serán las herramientas para que le indiques a Joppy hacía donde ir o que hacer. Intenta ser lo más especifico posible en las instrucciones para que llegue más rápido.',
         instruImg: '',
     }
-],
+];
 
-const depura = [
+export const depura = [
     {
         title: 'Joppygrama',
         subtitle: '¡A construir!',
@@ -36,4 +36,4 @@ const depura = [
         instru: 'Los números en su parte superior e izquierda, indican el número de casillas consecutivas que se tienen que rellenar. Intenta cometer la MENOR CANTIDAD de errores posible.',
         instruImg: '',
     }
-],
+];
