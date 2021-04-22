@@ -18,9 +18,6 @@ function Instructions({ handleClose, open, img, info }) {
                     {info.instru}
                 </p>
                 <img className={classes.img} src={info.instruImg} alt="Imagen explicativa del ejercicio" />
-                <p className={classes.text}>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit lectus sapien, cubilia mattis bibendum suscipit euismod.
-                </p>
             </DialogContent>
         </Dialog>
     );
