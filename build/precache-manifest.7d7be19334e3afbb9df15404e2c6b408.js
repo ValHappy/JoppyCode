@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85d562998283d0ae7cb2803d32bcc21c",
+    "revision": "f6c3492699b4e185ef6c2785d7cbc21a",
     "url": "/index.html"
   },
   {
-    "revision": "6ffaac8d2513863b1099",
-    "url": "/static/js/2.8ed51155.chunk.js"
+    "revision": "b9b4412fda720e893334",
+    "url": "/static/js/2.a36695c6.chunk.js"
   },
   {
     "revision": "d2266803016540034565984c8bb59069",
-    "url": "/static/js/2.8ed51155.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a36695c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "001af0efd226abec303e",
-    "url": "/static/js/main.8419d8c7.chunk.js"
+    "revision": "1d457623a6da4307f259",
+    "url": "/static/js/main.e0cce68a.chunk.js"
   },
   {
     "revision": "a6613213d83930de28b4",
@@ -24,8 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Joppy.716387fc.png"
   },
   {
-    "revision": "8f9ad984bb3379d4a56481fbb6a0c6d8",
-    "url": "/static/media/JoppyCode.8f9ad984.svg"
+    "revision": "7839ce0ceb237c06d4532b34b34665f0",
+    "url": "/static/media/JoppyCode.7839ce0c.svg"
+  },
+  {
+    "revision": "4553c0cc5b33018fcbd7f536e421ffbf",
+    "url": "/static/media/JoppyGafas.4553c0cc.png"
   },
   {
     "revision": "afd16a2708457d7fb1bbd8b6d4e38bf3",
