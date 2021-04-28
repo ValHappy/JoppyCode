@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Provider from '../App/Provider'
 import NavBar from '../../components/NavBar/NavBar';
 import NavDrawer from '../../components/NavDrawer/NavDrawer';
+import Login from '../Login/Login';
 import Home from '../Home/Home';
 import Pet from '../Pet/Pet';
 import Progress from '../Progress/Progress';
@@ -30,7 +31,8 @@ function App() {
           <NavDrawer />
         <main className={classes.container}>
           <div className={classes.content}>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Login} />
+            <Route path="/home" exact component={Home} />
             <Route path="/Pet" component={Pet} />
             <Route path="/Progress" component={Progress} />
             <Route path="/Skills" component={Skills} />

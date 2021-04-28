@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
 import FichaExercise from '../../components/Ficha/FichaExercise';
 import Step from '../../components/General/Step';
-import img1 from './../../assets/img/Joppy.png';
 import { MenuContext } from '../App/Provider';
 import {selecInfo} from '../../helpers/getInfoExcersices';
 import {selectColor} from '../../helpers/getColor';
+import img1 from './../../assets/img/Joppy/Joppy.png';
 
 function Exercises() {
     const classes = useStyles();

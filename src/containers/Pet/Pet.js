@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, makeStyles } from '@material-ui/core';
-import JoppyConejo from '../../assets/img/Joppy.png';
 import { ColorLensRounded, ContactSupportRounded, SmsRounded, SportsEsportsRounded } from '@material-ui/icons';
 import colors from '../../config/colors';
+import JoppyConejo from '../../assets/img/Joppy/Joppy.png';
 
 function Pet() {
     const classes = useStyles();

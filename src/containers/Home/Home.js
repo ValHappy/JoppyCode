@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import colors from '../../config/colors';
-import JoppyConejo from '../../assets/img/JoppyGafas.png';
+import JoppyGafas from '../../assets/img/Joppy/JoppyGafas.png';
 
 function Home() {
     const classes = useStyles();
@@ -13,7 +13,7 @@ function Home() {
                 <p className={classes.paragraph + " animate__animated animate__slideInDown"}> Soy Joppy y te acompañaré en esta aventura de programar ¡Vamos a divertirnos!.</p>
             </div>
             <div className={classes.content}>
-                <img className={classes.Joppy} src={JoppyConejo} alt="Joppy el Conejo" />
+                <img className={classes.Joppy} src={JoppyGafas} alt="Joppy el Conejo" />
             </div>
         </div>
     );
