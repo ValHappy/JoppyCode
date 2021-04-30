@@ -25,7 +25,7 @@ function Exercises() {
                 {!!infos && infos.map((info,i)=>{
                     return <FichaExercise
                         col={col}
-                        img={img1}
+                        img={info.cover}
                         information = {info}
                         value={i}
                     />;

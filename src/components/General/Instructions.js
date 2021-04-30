@@ -3,7 +3,6 @@ import { Dialog, DialogActions, DialogContent, makeStyles, TextField } from '@ma
 import Btn from '../General/Btn';
 import { withRouter } from 'react-router-dom';
 import colors from '../../config/colors';
-import robo from './../../assets/img/robot.png';
 
 function Instructions({ handleClose, open, img, info }) {
 
