@@ -1,6 +1,8 @@
 import { Card, CardContent, makeStyles } from '@material-ui/core';
 import React from 'react';
 import colors from '../../config/colors';
+import barras from '../../assets/img/graphics/barras.svg';
+import torta from '../../assets/img/graphics/torta.svg';
 
 function ProgressPractice({ title }) {
     const classes = useStyle();
@@ -11,10 +13,10 @@ function ProgressPractice({ title }) {
                 <h1 className={classes.title}>{title}</h1>
                 <div className={classes.content}>
                     <div className={classes.daily}>
-                        <h2 className={classes.subtitle}>Insertar gráfica de practica diaria</h2>
+                        <img className={classes.barras} src={barras} alt="daily frequency of practice"/>
                     </div>
                     <div className={classes.monthly}>
-                        <h2 className={classes.subtitle}>Insertar gráfica de <br/>practica mensual</h2>
+                        <img className={classes.torta} src={torta} alt="monthly frequency of practice"/>
                     </div>
                 </div>
             </CardContent>
@@ -59,6 +61,12 @@ const useStyle = makeStyles((theme) => ({
         width: '30%',
         height: '80%',
     },
+    barras: {
+        width: '90%'
+    },
+    torta: {
+        width: '90%'
+    }
 }));
 
 export default ProgressPractice;

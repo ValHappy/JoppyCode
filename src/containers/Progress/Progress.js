@@ -12,7 +12,7 @@ function Progress() {
     return (
         <div className={classes.progress}>
             <h1 className={classes.title  + " animate__animated animate__slideInDown"}>PROGRESO</h1>
-            <div className={classes.container}>
+            <div className={classes.containerSkill}>
                 <ProgressSkill
                     icon={<ExtensionRounded className={classes.icon}
                         style={{ color: colors.pink }} />}
@@ -39,8 +39,8 @@ function Progress() {
                 />
             </div>
             <div className={classes.container}>
-                <ProgressPractice title={"Frecuencia diaria"} />
-                <ProgressRecord title={"Lorem Ipsum Dolor"} />
+                <ProgressPractice title={"Estimación de aprendizaje vs Frecuencia diaria"} />
+                <ProgressRecord/>
             </div>
         </div>
     );
@@ -60,7 +60,16 @@ const useStyles = makeStyles(theme => ({
     },
     container: {
         width: '100%',
-        height: '100%',
+        height: '70%',
+        margin: '1em',
+        marginTop: '3%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    containerSkill: {
+        width: '100%',
+        height: '30%',
         margin: '1em',
         marginTop: '3%',
         display: 'flex',

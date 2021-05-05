@@ -1,17 +1,15 @@
 import { Card, CardContent, makeStyles } from '@material-ui/core';
 import React from 'react';
 import colors from '../../config/colors';
+import trofeo from '../../assets/img/graphics/trofeo.svg';
 
-function ProgressSkill({ title }) {
+function ProgressSkill() {
     const classes = useStyle();
 
     return (
         <Card className={classes.container + " " + "animate__animated animate__zoomIn"}>
             <CardContent className={classes.content}>
-                <h1 className={classes.title}>{title}</h1>
-                <div className={classes.info}>
-                </div>
-
+                <img className={classes.img} src={trofeo} alt="Record"/>
             </CardContent>
         </Card>
     );
@@ -36,19 +34,10 @@ const useStyle = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    title: {
-        margin: '0',
-        color: colors.white,
-        fontSize: '1.3vw',
-    },
-    info: {
-        width: 100,
-        height: 140,
+    img: {
+        width: '90%',
         margin: '0.5em',
         padding: '0.5em',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
     },
 }));
 

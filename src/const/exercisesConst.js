@@ -9,7 +9,7 @@ import depuInstru from '../assets/img/Instru/Inst_nono.png';
 import descCover1 from '../assets/img/covers/desc/desc1.svg';
 import descCover2 from '../assets/img/covers/desc/desc2.svg';
 import descCover3 from '../assets/img/covers/desc/desc3.svg';
-import descCover4 from '../assets/img/covers/desc/desc4.svg';
+import descCover4 from '../assets/img/covers/desc/desc4.png';
 import descCover5 from '../assets/img/covers/desc/desc5.svg';
 
 //abstraction
@@ -22,7 +22,7 @@ import abstCover5 from '../assets/img/covers/abst/abst5.svg';
 //generalization
 import geneCover1 from '../assets/img/covers/gene/gene1.svg';
 import geneCover2 from '../assets/img/covers/gene/gene2.svg';
-import geneCover3 from '../assets/img/covers/gene/gene2.svg';
+import geneCover3 from '../assets/img/covers/gene/gene3.svg';
 import geneCover4 from '../assets/img/covers/gene/gene4.svg';
 import geneCover5 from '../assets/img/covers/gene/gene5.svg';
 

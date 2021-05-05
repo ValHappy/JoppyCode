@@ -6,13 +6,18 @@ import Step from '../../components/General/Step';
 import { MenuContext } from '../App/Provider';
 import {selecInfo} from '../../helpers/getInfoExcersices';
 import {selectColor} from '../../helpers/getColor';
-import img1 from './../../assets/img/Joppy/Joppy.png';
 
-function Exercises() {
+function Exercises({history}) {
     const classes = useStyles();
-    const [, , habilidad] = useContext(MenuContext);
+    const [, , habilidad, , dificultad, , , setInfoExcerse] = useContext(MenuContext);
     const infos = selecInfo(habilidad.value);
     const col = selectColor(habilidad.value);
+
+    function handleClick(e) {
+        history.push("/exercise?id=" + habilidad.value + "?id=" + e.target.dataset.value + "?diffcult=" + dificultad);
+        setInfoExcerse(infos[e.target.dataset.value]);
+    }
+
     return (
         <div className={classes.exercises}>
             <h1 className={classes.title + " animate__animated animate__slideInDown"}>EJERCICIOS DE {habilidad.name}</h1>
@@ -28,6 +33,7 @@ function Exercises() {
                         img={info.cover}
                         information = {info}
                         value={i}
+                        handleClick={handleClick}
                     />;
                 })}
             </div>

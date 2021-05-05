@@ -8,6 +8,7 @@ function Pet() {
     const classes = useStyles();
 
     return (
+
         <div className={classes.pet}>
             <div className={classes.container}>
                 <h1 className={classes.title + " animate__animated animate__slideInDown"}>JOPPY</h1>
@@ -18,33 +19,34 @@ function Pet() {
             <div className={classes.content + " animate__animated animate__slideInDown"}>
                 <Button
                     className={classes.btn}
-                    color="secondary"F
-                   >
-                    <SportsEsportsRounded fontSize="large"  style={{color: colors.white}}/>
+                    color="secondary"
+                >
+                    <SportsEsportsRounded fontSize="large" style={{ color: colors.white }} />
                 </Button>
 
                 <Button
                     className={classes.btn}
-                    color="secondary"F
-                    >
-                    <ContactSupportRounded fontSize="large"  style={{color: colors.white}}/>
+                    color="secondary"
+                >
+                    <ContactSupportRounded fontSize="large" style={{ color: colors.white }} />
                 </Button>
 
                 <Button
                     className={classes.btn}
-                    color="secondary"F
-                    >
-                    <SmsRounded fontSize="large"  style={{color: colors.white}}/>
+                    color="secondary"
+                >
+                    <SmsRounded fontSize="large" style={{ color: colors.white }} />
                 </Button>
 
                 <Button
                     className={classes.btn}
-                    color="secondary"F
-                    >
-                    <ColorLensRounded fontSize="large"  style={{color: colors.white}}/>
+                    color="secondary"
+                >
+                    <ColorLensRounded fontSize="large" style={{ color: colors.white }} />
                 </Button>
             </div>
         </div>
+
     );
 }
 
@@ -92,6 +94,13 @@ const useStyles = makeStyles(theme => ({
         padding: '1em',
         background: colors.pink,
         borderRadius: '5em',
+
+        '&:hover': {
+            backgroundColor: 'none',
+            borderColor: colors.blue,
+            color: colors.blue,
+            boxShadow: 'none',
+        }
     }
 }));
 

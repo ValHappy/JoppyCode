@@ -18,6 +18,7 @@ import Test from '../Test/Test';
 import Footer from '../../components/General/Footer';
 import Exercises from '../Exercises/Exercises';
 import Exercise from '../Exercise/Exercise';
+import colors from '../../config/colors';
 
 function App() {
   const classes = useStyles();
@@ -31,8 +32,7 @@ function App() {
           <NavDrawer />
         <main className={classes.container}>
           <div className={classes.content}>
-            <Route path="/" exact component={Login} />
-            <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/Pet" component={Pet} />
             <Route path="/Progress" component={Progress} />
             <Route path="/Skills" component={Skills} />

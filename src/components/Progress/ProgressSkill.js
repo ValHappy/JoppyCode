@@ -23,7 +23,7 @@ function ProgressSkill({ icon, score, skill }) {
 const useStyle = makeStyles((theme) => ({
     container: {
         width: '21%',
-        height: '80%',
+        height: '90%',
         padding: '1em',
         display: 'flex',
         justifyContent: 'center',
