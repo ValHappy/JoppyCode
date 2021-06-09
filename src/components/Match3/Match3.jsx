@@ -37,7 +37,7 @@ const Match3 = ({ difficult }) => {
             p5.textAlign(p5.LEFT);
             p5.textSize(this.fontSize);
             p5.fill(this.color);
-            p5.text(this.prefixText + this.score, this.position.x, p5.height-20);
+            p5.text(this.prefixText + this.score, this.position.x, p5.height-10);
             if(prefixText== "Score: " && this.score >= 500){
                 pantalla = 1;
             }
@@ -485,8 +485,8 @@ const Match3 = ({ difficult }) => {
                 break;
         };
 
-        topScore = new scoreText(p5, 220, 60, 30, "Top Score: ");
-        score = new scoreText(p5, 50, 100, 30, "Score: ");
+        topScore = new scoreText(p5, (p5.width/4) * 7, 60, p5.width/6, "Top Score: ");
+        score = new scoreText(p5, (p5.width/4) * 1, 100, p5.width/6, "Score: ");
         cnv = p5.createCanvas(p5.windowWidth * 0.25, p5.windowWidth * 0.25);
         cnv.parent(canvasParentRef);
         colors = new Colors(p5);

@@ -86,7 +86,7 @@ function Pet() {
 const useStyles = makeStyles(theme => ({
     pet: {
         width: '100%',
-        height: '90%',
+        height: '40vw',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
