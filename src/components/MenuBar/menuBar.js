@@ -31,16 +31,6 @@ function MenuBar() {
 
     return (
         <div className={classes.profile}>
-            <div>
-                <FormGroup>
-                    <FormControlLabel
-                        className={classes.switch}
-                        control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-                        label={auth ? 'Logout' : 'Login'}
-                    />
-                </FormGroup>
-            </div>
-
             {auth && (
                 <div className={classes.container}>
                     <IconButton
