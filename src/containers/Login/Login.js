@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles, TextField } from '@material-ui/core';
 import Logo from '../../components/General/Logo';
 import Btn from '../../components/General/Btn';
 import JoppyLogin from '../../assets/img/Joppy/JoppyLogin.svg'
+import { useHistory } from 'react-router';
+import { MenuContext } from '../../containers/App/Provider';
 
 function Login() {
     const classes = useStyle();
+    const history = useHistory();
+
+    const [,,,,,,,,isLogged,setIsLogged] = useContext(MenuContext);
+
+    const onClick = () => {
+        setIsLogged({name: document.getElementById("name").value + " " + document.getElementById("lastname").value, isLogged: true});
+        history.replace('/home');
+        
+    }
 
     return (
         <div className={classes.login}>
@@ -35,7 +46,7 @@ function Login() {
                         size="medium"
                         color="secondary"
                     />
-                    <Btn text="Ingresar" />
+                    <Btn text="Ingresar" onClick={onClick} />
                 </div>
             </div>
         </div>
@@ -45,8 +56,12 @@ function Login() {
 
 const useStyle = makeStyles(() => ({
     login: {
-        width: '100%',
-        height: '100%',
+        background: '#FFFFFF',
+        width: '100vw',
+        height: '100vh',
+        position: 'absolute',
+        left: 0,
+        zIndex: 100,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -55,15 +70,13 @@ const useStyle = makeStyles(() => ({
         width: '50%',
         height: '100%',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
     },
     logo: {
         width: '60%',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
     },
     container: {
@@ -75,7 +88,7 @@ const useStyle = makeStyles(() => ({
         alignItems: 'center',
     },
     content: {
-        width: '100%',
+        width: '60%',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -84,7 +97,7 @@ const useStyle = makeStyles(() => ({
     },
     field: {
         width: '50%',
-        margin: '1em',
+        marginBottom: '1em',
     },
 }));
 

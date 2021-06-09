@@ -32,7 +32,7 @@ function App() {
           <NavDrawer />
         <main className={classes.container}>
           <div className={classes.content}>
-            <Route path="/" exact component={Home} />
+            <Route path="/home" exact component={Home} />
             <Route path="/Pet" component={Pet} />
             <Route path="/Progress" component={Progress} />
             <Route path="/Skills" component={Skills} />
@@ -44,6 +44,7 @@ function App() {
           <div className={classes.footer}>
             <Footer />
           </div>
+        <Route path="/" exact component={Login} />
         </main>
         </Provider>
       </div>

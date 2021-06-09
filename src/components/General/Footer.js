@@ -50,6 +50,7 @@ const useStyle = makeStyles(() => ({
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '0.55vw',
+        zIndex: 2,
     },
     container: {
         width: '100%',

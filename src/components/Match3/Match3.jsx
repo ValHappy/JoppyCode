@@ -23,17 +23,24 @@ const Match3 = ({ difficult }) => {
     }
 
     var scoreText = function (p5, x, y, fontSize, prefixText) {
-        this.score = 0;
+        if(prefixText== "Score: "){
+            this.score = 0;
+        } else {
+            this.score = 500;
+        }
         this.fontSize = fontSize;
         this.position = p5.createVector(x, y);
         this.prefixText = prefixText;
-        this.color = p5.color(255);
+        this.color = p5.color(0);
 
         this.show = function () {
-            /*textAlign(LEFT);
-            textSize(this.fontSize);
-            fill(this.color);
-            text(this.prefixText + this.score, this.position.x, this.position.y);*/
+            p5.textAlign(p5.LEFT);
+            p5.textSize(this.fontSize);
+            p5.fill(this.color);
+            p5.text(this.prefixText + this.score, this.position.x, p5.height-20);
+            if(prefixText== "Score: " && this.score >= 500){
+                pantalla = 1;
+            }
         }
     }
 
@@ -440,10 +447,10 @@ const Match3 = ({ difficult }) => {
             p5.rectMode(p5.CENTER);
             p5.rect(this.position.x, this.position.y, this.width, this.height);
 
-            /*p5.textAlign(p5.CENTER);
+           /* p5.textAlign(p5.CENTER);
             p5.textSize(16);
             p5.fill(0);
-            p5.text(this.id, this.position.x, this.position.y);*/
+            p5.text(this.id, this.position.x, p5.height-20);*/
         }
 
         this.isMouseOver = function (mousePosX, mousePosY, xPadding, yPadding) {
@@ -464,6 +471,7 @@ const Match3 = ({ difficult }) => {
     var animation;
     var difN;
     var cnv;
+    var pantalla = 0;
 
     const setup = (p5, canvasParentRef) => {
 
@@ -477,7 +485,7 @@ const Match3 = ({ difficult }) => {
                 break;
         };
 
-        topScore = new scoreText(p5, 50, 60, 45, "Top Score: ")
+        topScore = new scoreText(p5, 220, 60, 30, "Top Score: ");
         score = new scoreText(p5, 50, 100, 30, "Score: ");
         cnv = p5.createCanvas(p5.windowWidth * 0.25, p5.windowWidth * 0.25);
         cnv.parent(canvasParentRef);
@@ -489,13 +497,19 @@ const Match3 = ({ difficult }) => {
     }
 
     const draw = (p5) => {
-        p5.background(255);
-        topScore.show();
-        score.show();
-        tiles.show();
-        animation.show();
-        animation.animateText();
-        animation.fall();
+        if (pantalla == 0) {
+            p5.background(255);
+            topScore.show();
+            score.show();
+            tiles.show();
+            animation.show();
+            animation.animateText();
+            animation.fall();
+        } else {
+            p5.background(255);
+            p5.fill(0,255,0);
+            p5.text("Ganaste", p5.width/2, p5.height/2)
+        }
     }
 
     const mousePressed = (p5) => {

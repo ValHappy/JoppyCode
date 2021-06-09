@@ -63,28 +63,28 @@ function NavDrawer(props) {
 
             <List value={props.location.pathname} >
 
-                <ListItem className={classes.item} button key={"Home"} data-value="/" onClick={handleClick}>
-                    <ListItemIcon className={classes.icon}> <HomeRounded /> </ListItemIcon>
+                <ListItem className={classes.item} button key={"Home"} data-value="/home" onClick={handleClick}>
+                    <ListItemIcon className={classes.icon} style={{marginLeft: '0.4vw'}}> <HomeRounded /> </ListItemIcon>
                     <label > Inicio</label>
                 </ListItem>
 
                 <ListItem className={classes.item} button key={"Pet"} data-value="/Pet" onClick={handleClick}>
-                    <ListItemIcon className={classes.icon}> <PetsRounded /> </ListItemIcon>
+                    <ListItemIcon className={classes.icon} style={{marginLeft: '0.4vw'}}> <PetsRounded /> </ListItemIcon>
                     <label > Mi mascota</label>
                 </ListItem>
 
                 <ListItem className={classes.item} button key={"Progress"} data-value="/Progress" onClick={handleClick}>
-                    <ListItemIcon className={classes.icon}> <TimelineRounded /> </ListItemIcon>
+                    <ListItemIcon className={classes.icon} style={{marginLeft: '0.4vw'}}> <TimelineRounded /> </ListItemIcon>
                     <label > Progreso</label>
                 </ListItem>
 
                 <ListItem className={classes.item} button key={"Skills"} data-value="/Skills" onClick={handleClick}>
-                    <ListItemIcon className={classes.icon}> <ComputerRounded /> </ListItemIcon>
+                    <ListItemIcon className={classes.icon} style={{marginLeft: '0.4vw'}}> <ComputerRounded /> </ListItemIcon>
                     <label > Habilidades</label>
                 </ListItem>
 
                 <ListItem className={classes.item} button key={"Test"} data-value="/Test" onClick={handleClick}>
-                    <ListItemIcon className={classes.icon}> <SchoolRounded /> </ListItemIcon>
+                    <ListItemIcon className={classes.icon} style={{marginLeft: '0.4vw'}}> <SchoolRounded /> </ListItemIcon>
                     <label > Ponte a prueba</label>
                 </ListItem>
 
@@ -100,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
         width: drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
+        zIndex: 3,
 
     },
     drawerOpen: {
@@ -115,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
         overflowX: 'hidden',
-        width: theme.spacing(7) + 1,
+        width: theme.spacing(6) + 1,
         [theme.breakpoints.up('sm')]: {
             width: theme.spacing(9) + 1,
         },

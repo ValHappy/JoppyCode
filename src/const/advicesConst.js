@@ -1,0 +1,1 @@
+export const advices = ['No intentes saltar procesos al programar, si ves que algún experto lo hace es porque ya ha repetido el proceso tantas veces que lo tiene interiorizado.', 'Es muy importante separar el problema que tu codigo busca solucionar en partes.', 'No olvides generar una estructura y un paso a paso en papel antes de pasar al lenguaje de programación.']

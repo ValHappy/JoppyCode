@@ -51,7 +51,7 @@ function NavBar() {
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
-        zIndex: theme.zIndex.drawer + 1,
+        zIndex: 4,
         background: colors.white,
         transition: theme.transitions.create(['width', 'margin'], {
             easing: theme.transitions.easing.sharp,

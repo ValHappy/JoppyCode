@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -7,9 +7,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-
-// Style guide
+import { MenuContext } from '../../containers/App/Provider';
 import colors from '../../config/colors';
+// Style guide
+
 
 function MenuBar() {
     const classes = useStyles();
@@ -17,6 +18,7 @@ function MenuBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
+    const [, , , , , , , , isLogged] = useContext(MenuContext);
     const handleChange = (event) => {
         setAuth(event.target.checked);
     };
@@ -40,6 +42,7 @@ function MenuBar() {
                         onClick={handleMenu}
                         style={{ color: colors.blue }}
                     >
+                        <label className={classes['profile--label']}>{isLogged.name}</label>
                         <AccountCircle fontSize="large" />
                     </IconButton>
 
@@ -76,8 +79,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'flex-end',
         fontSize: "0.7vw",
     },
+    'profile--label': {
+        marginRight: '0.8vw',
+    },
     container: {
-        width: '5%',
+        width: '22%',
         margin: '0',
         padding: '0,5em',
         display: 'flex',
@@ -92,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '-1em',
     },
     switch: {
-        paddingTop : "1em",
+        paddingTop: "1em",
         color: colors.black,
     }
 }));
