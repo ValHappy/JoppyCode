@@ -1,6 +1,6 @@
 # Bienvenido a JoppyCode
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JoppyCode es una herramienta para el refuerzo de habilidades básicas de programación, además con la ayuda de TechHase podrás diagnosticar cual es la habilidad menos desarrollada de tus estudiantes o cual es su forma de aprendizaje. 
 
 ## Available Scripts
 
